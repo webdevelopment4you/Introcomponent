@@ -10,3 +10,5 @@ let changeBackground = () => {
     }
 }
 
+changeBackground()
+
