@@ -55,13 +55,14 @@ body{
 .form{
     background-color: #fff;
     width: 65%;
-    height: 400px;
+    height: fit-content;
     margin: auto;
     border-radius: 8px;
     z-index: 2;
     position: relative;
     box-shadow: 0px 6px #3c3c3c42;
     max-width: 500px;
+    padding-bottom: 12px;
 }
 
 .formHeader{
@@ -141,6 +142,24 @@ body{
 
 .content{
     margin-top: 30px;
+}
+
+#firstNameError, #lastNameError, #emailErrorOne, #emailErrorTwo, #passwordError{
+    color:hsl(0, 100%, 74%);
+    font-size: 10px;
+    line-height: 10px;
+    float: right;
+    margin-right: 9%;
+    font-style: italic;
+    font-weight: 600;
+}
+
+#showPassword{
+    width:3%;
+}
+
+label{
+    font-size: 10px;
 }
 
 @media screen and (max-width:520px){

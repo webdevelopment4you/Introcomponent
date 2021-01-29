@@ -34,11 +34,23 @@
         <span>Try it free 7 days</span> then $20/mo. thereafter
       </div>
       <div class="form">
-        <form action="index.html">
-          <input type="text" placeholder="First Name"><br>
-          <input type="text" placeholder="Last Name"><br>
-          <input type="email" placeholder="Email Address"><br>
-          <input type="password" placeholder="Password"><br>
+        <form action="index.html" method="GET" onsubmit="return validateMyForm()">
+          <input type="text" name="firstName" id="firstName" aria-labelledby="firstName" placeholder="First Name">
+          <span id="firstNameError">First Name cannot be empty</span>
+
+          <input type="text" name="lastName" id="lastName" aria-labelledby="lastName" placeholder="Last Name">
+          <span id="lastNameError">Last Name cannot be empty</span>
+
+          <input type="email" name="email" id="email" aria-labelledby="email" placeholder="Email Address"
+            autocomplete="email">
+          <span id="emailErrorOne"> Email cannot be empty </span>
+          <span id="emailErrorTwo"> Looks like this is not an email </span>
+
+          <input type="password" name="password" id="password" aria-labelledby="password" placeholder="Password"
+            autocomplete="current-password"><br>
+
+          <span id="passwordError">Password cannot be empty</span>
+
           <button type="submit" id="button">Claim your free trial</button>
         </form>
         <div id="formFooter">
